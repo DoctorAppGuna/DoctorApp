@@ -1,0 +1,129 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css" ;
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body{
+  background: rgb(125 125 125 / 17%);  
+}
+
+.btn {
+    border-radius: 15px;
+    color: blue;
+    outline: none;
+    box-shadow: 0px 0px 5px 0px;
+  }
+
+  .home {
+    box-shadow: none !important;
+  }
+
+  .default:hover {
+    background: #e7e7e7;
+  }
+
+  .backdrop{
+    background: rgb(0 0 0 / 39%);
+  }
+
+  .input-align{
+
+    input {
+      padding: 7px 5px;
+      width: 116px;
+      margin-left: 10px;
+      border-radius: 6px;
+    }
+    
+  }
+
+  .cal-box{
+    margin: 40px 30px;
+    box-shadow: 0px 0px 5px 0px;
+    border-radius: 10px;
+    background: white;
+  }
+
+  .slot-box{
+    width: 900px;
+    height: auto;
+    margin: 40px 30px;
+    box-shadow: 0px 0px 5px 0px;
+    border-radius: 10px;
+    background: white;
+  }
+  .morning-btn{
+    margin-top: 25px;
+    font-weight: 500;
+    button {
+      float: right;
+    }
+  }
+
+  .slot-btn-align {
+    margin-top: 5%;
+    button {
+      margin-right: 20px;
+    }
+  }
+
+  .slot-head {
+    font-size: x-large;
+    margin-left: 35px;
+    font-weight: 500;
+  }
+
+  .table {
+    width: 75%;
+    margin-left: 14%;
+    box-shadow: 0px 0px 5px 0px;
+    border-radius: 10px;
+    background: white;
+  }
+
+  .date-align {
+    margin-right: 55%;
+  }
+
+  .evening-btn {
+    margin-top: 10%;
+    font-weight: 500;
+    button {
+      float: right;
+    }
+  }
+
+  .slot-eve-btn-align{
+    margin-top: 5%;
+    button {
+      margin-right: 20px;
+    }
+  }
+
+  .backdrop{
+    z-index: 400;
+  }
+
+  .modal-footer {
+    span {
+      color: red;
+      padding-right: 15%;
+    }
+  }
+
+  .ngx-notification {
+    top: 35% !important;
+    right: 20% !important;
+    width: 35%;
+  }
+  .ngx-notification .success {
+    background-color: rgb(201, 252, 160) !important;
+    border-color: rgb(201, 252, 160) !important;
+    color: rgb(4, 109, 7) !important;
+  }
+
+  .ngx-notification .danger {
+    background-color: rgb(201, 252, 160) !important;
+    border-color: rgb(201, 252, 160) !important;
+    color: rgb(4, 109, 7) !important;
+  }

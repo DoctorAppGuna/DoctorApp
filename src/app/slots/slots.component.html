@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row">
+        <label class="slot-head">Appointments
+            <button class="btn home default" [routerLink]="['/home']">Home</button>
+        </label>
+        <div class="col-md-4">
+            <mat-calendar class="cal-box" [selected]="selectedDate" (selectedChange)="onSelect($event)"
+                (click)="getAllSlots()"></mat-calendar>
+        </div>
+        <div class="col-md-8 slot-box">
+            <div class="morning-btn">
+                Morning
+                <button type="button" class="btn btn-outline-primary float-right" (click)="openModal('mor')">+ Add
+                    slot</button>
+            </div>
+            <span>09:00 AM to 12:00 PM</span>
+            <div class="slot-btn-align">
+                <button type="button" *ngFor="let item of mrgItems"
+                    class="btn btn-outline-primary">{{item.from}}</button>
+            </div>
+            <div class="evening-btn">
+                Evening
+                <button type="button" class="btn btn-outline-primary float-right" (click)="openModal('eve')">+ Add
+                    slot</button>
+            </div>
+            <span>05:00 PM to 09:00 PM</span>
+            <div class="slot-eve-btn-align">
+                <button type="button" *ngFor="let item of eveItems"
+                    class="btn btn-outline-primary">{{item.from}}</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <div class="modal backdrop" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Time Slot</h4>
+                    <button type="button" class="btn-close" aria-label="Close" (click)="onCloseHandled()"></button>
+                </div>
+                <div class="modal-body input-align">
+                    From <input [ngxTimepicker]="picker1" [min]="minTime" [max]="maxTime" [(ngModel)]="data.from"
+                        name="from">
+                    <ngx-material-timepicker #picker1></ngx-material-timepicker>
+                    To <input [ngxTimepicker]="picker" [min]="minTime" [max]="maxTime" [(ngModel)]="data.to" name="to">
+                    <ngx-material-timepicker #picker></ngx-material-timepicker>
+                </div>
+                <div class="modal-footer">
+                    <span>{{alert}}</span>
+                    <button type="button" class="btn btn-default" (click)="save()">Save</button>
+                    <button type="button" class="btn btn-default" (click)="onCloseHandled()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
